@@ -11,17 +11,18 @@ const Model = require('./model');
  * @apiParam {String} skip Skip
  *
  *
- * @apiParam {String} cuenta Cuenta
- * @apiParam {String} password  Password
- * @apiParam {String} nombres  Nombres
- * @apiParam {String} apellidos Apellidos
- * @apiParam {String} tipo_identificacion  Tipo identificacion
- * @apiParam {String} numero_identificacion numero_identificacion
- * @apiParam {String} email     Email
- * @apiParam {String} telefono Telefono
- * @apiParam {String} direccion Direccion
- * @apiParam {String} genero Genero
- * @apiParam {String} tipo Tipo usuario
+ * @apiSuccess {String} cuenta Cuenta
+ * @apiSuccess {String} nombres  Nombres
+ * @apiSuccess {String} apellidos Apellidos
+ * @apiSuccess {String} tipo_identificacion  Tipo identificacion
+ * @apiSuccess {String} numero_identificacion numero_identificacion
+ * @apiSuccess {String} email     Email
+ * @apiSuccess {String} telefono Telefono
+ * @apiSuccess {String} direccion Direccion
+ * @apiSuccess {String} genero Genero
+ * @apiSuccess {String} tipo Tipo usuario
+ * @apiSuccess {String} createdAt  Created date of the Users.
+ * @apiSuccess {String} updateAt   Last update date of the Users.
  *
  * @apiSuccessExample Success-Response:
  *     HTTP/1.1 200 OK
