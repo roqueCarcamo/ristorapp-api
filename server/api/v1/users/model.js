@@ -4,11 +4,27 @@ const validator = require('validator');
 const bcrypt = require('bcryptjs');
 
 const schema = new Schema({
-  firstname: {
+  cuenta: {
     type: String,
     required: true
   },
-  lastname: {
+  password: {
+    type: String,
+    required: true
+  },
+  nombres: {
+    type: String,
+    required: true
+  },
+  apellidos: {
+    type: String,
+    required: true
+  },
+  tipo_identificacion: {
+    type: String,
+    required: true
+  },
+  numero_identificacion: {
     type: String,
     required: true
   },
@@ -23,7 +39,19 @@ const schema = new Schema({
       message: '{VALUE} is not a valid email address'
     },
   },
-  password: {
+  telefono: {
+    type: String,
+    required: true
+  },
+  direccion: {
+    type: String,
+    required: true
+  },
+  genero: {
+    type: String,
+    required: true
+  },
+  tipo: {
     type: String,
     required: true
   }

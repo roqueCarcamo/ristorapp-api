@@ -5,8 +5,9 @@ const auth = require('./../auth');
 
 /*
  * /api/users           GET  - LIST USER
- * /api/users/signup    POST - SIGNUP
+ * /api/users/signup    POST - REGISTRAR
  * /api/users/login     POST - LOGIN
+ * /api/users/profile   POST - PERFIL
  */
 
 router.route('/')

@@ -3,7 +3,7 @@ const config = require('./../../../config');
 const Model = require('./model');
 
 /**
- * @api {get} /users List Users
+ * @api {get} /users Listar Usuarios
  * @apiName GetUser
  * @apiGroup User
  * 
@@ -11,29 +11,42 @@ const Model = require('./model');
  * @apiParam {String} skip Skip
  *
  *
- * @apiSuccess {String} firstname   Firstname.
- * @apiSuccess {String} lastname    Lastname.
- * @apiSuccess {String} email       Email.
- * @apiSuccess {String} createdAt   Created date of the User.
- * @apiSuccess {String} updateAt    Last update date of the User.
+ * @apiParam {String} cuenta Cuenta
+ * @apiParam {String} password  Password
+ * @apiParam {String} nombres  Nombres
+ * @apiParam {String} apellidos Apellidos
+ * @apiParam {String} tipo_identificacion  Tipo identificacion
+ * @apiParam {String} numero_identificacion numero_identificacion
+ * @apiParam {String} email     Email
+ * @apiParam {String} telefono Telefono
+ * @apiParam {String} direccion Direccion
+ * @apiParam {String} genero Genero
+ * @apiParam {String} tipo Tipo usuario
  *
  * @apiSuccessExample Success-Response:
  *     HTTP/1.1 200 OK
- *{
- *   "data": [
- *        {
- *            "firstname": "Rodolfo",
- *            "lastname": "Carcamo",
- *            "email": "rodo@gmail.com",
- *            "createdAt": "2018-02-04T20:03:27.398Z",
- *            "updatedAt": "2018-02-04T20:03:27.398Z",
- *            "__v": 0
- *        }
- *   ],
- *    "limit": 10,
- *    "skip": 0,
- *    "count": 1
- *}
+ {
+    "data": [
+        {
+            "cuenta": "rrcarcamo",
+            "nombres": "Rodolfo",
+            "apellidos": "Carcamo",
+            "tipo_identificacion": "CC",
+            "numero_identificacion": "321243",
+            "email": "carcamo@gmail.com",
+            "telefono": "434234",
+            "direccion": "Cr 43 #25",
+            "genero": "M",
+            "tipo": "C",
+            "createdAt": "2018-06-09T14:14:01.162Z",
+            "updatedAt": "2018-06-09T14:14:01.162Z",
+            "__v": 0
+        }
+    ],
+    "limit": 10,
+    "skip": 0,
+    "count": 1
+}
  *
  * @apiError Document Not Found the id of the User was not found.
  *
@@ -69,19 +82,36 @@ exports.all = (req, res, next) => {
 };
 
 /**
- * @api {post} /signup Signup
+ * @api {post} /signup Registrar usuario
  * @apiName SignupUser
  * @apiGroup User
  *
- * @apiParam {String} firstname Firstname
- * @apiParam {String} lastname  Lastname
- * @apiParam {String} email     Email
+ * @apiParam {String} cuenta Cuenta
  * @apiParam {String} password  Password
+ * @apiParam {String} nombres  Nombres
+ * @apiParam {String} apellidos Apellidos
+ * @apiParam {String} tipo_identificacion  Tipo identificacion
+ * @apiParam {String} numero_identificacion numero_identificacion
+ * @apiParam {String} email     Email
+ * @apiParam {String} telefono Telefono
+ * @apiParam {String} direccion Direccion
+ * @apiParam {String} genero Genero
+ * @apiParam {String} tipo Tipo usuario
+ * 
+ * 
  * 
  *
- * @apiSuccess {String} firstname  Firstname.
- * @apiSuccess {String} lastname   Lastname.
- * @apiSuccess {String} email      Email.
+ * @apiSuccess {String} cuenta Cuenta
+ * @apiSuccess {String} password  Password
+ * @apiSuccess {String} nombres  Nombres
+ * @apiSuccess {String} apellidos Apellidos
+ * @apiSuccess {String} tipo_identificacion  Tipo identificacion
+ * @apiSuccess {String} numero_identificacion numero_identificacion
+ * @apiSuccess {String} email     Email
+ * @apiSuccess {String} telefono Telefono
+ * @apiSuccess {String} direccion Direccion
+ * @apiSuccess {String} genero Genero
+ * @apiSuccess {String} tipo Tipo usuario
  * @apiSuccess {String} createdAt  Created date of the Answers.
  * @apiSuccess {String} updateAt   Last update date of the Answers.
  * @apiSuccess {String} token      Token.
@@ -90,14 +120,21 @@ exports.all = (req, res, next) => {
  *     HTTP/1.1 200 OK
 {
     "user": {
-        "firstname": "Camila",
-        "lastname": "Hernandez",
-        "email": "camila@gmail.com",
-        "createdAt": "2018-02-04T21:08:35.724Z",
-        "updatedAt": "2018-02-04T21:08:35.724Z",
+        "cuenta": "rrcarcamo",
+        "nombres": "Rodolfo",
+        "apellidos": "Carcamo",
+        "tipo_identificacion": "CC",
+        "numero_identificacion": "321243",
+        "email": "carcamo@gmail.com",
+        "telefono": "434234",
+        "direccion": "Cr 43 #25",
+        "genero": "M",
+        "tipo": "C",
+        "createdAt": "2018-06-09T14:14:01.162Z",
+        "updatedAt": "2018-06-09T14:14:01.162Z",
         "__v": 0
     },
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YTc3NzY1MzlhOWIyODE5ZmIxMDc0OTgiLCJpYXQiOjE1MTc3Nzg1MTYsImV4cCI6MTUxNzc4MjExNn0.w2eJg8kGR_w1SE3oqSINkmbr2s0q2s-bIbN2H5fMxWE"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YjFiZTBhOTU4N2NjZjdjZDczMjFjMzgiLCJpYXQiOjE1Mjg1NTM2NDIsImV4cCI6MTUyODU1NzI0Mn0.Evdurl3agsojFPtGJMHQxPvbcUAhEOQpX-G3t5Ra1IQ"
 }
  *
  * @apiError Document Not Found the id of the Questions was not found.
@@ -112,10 +149,17 @@ exports.create = (req, res, next) => {
     const body = req.body;
     
     let document = new Model({
-        firstname: body.firstname,
-        lastname: body.lastname,
-        email: body.email,
+        cuenta: body.cuenta,
         password: body.password,
+        nombres: body.nombres,
+        apellidos: body.apellidos,
+        tipo_identificacion: body.tipo_identificacion,
+        numero_identificacion: body.numero_identificacion,
+        email: body.email,
+        telefono: body.telefono,
+        direccion: body.direccion,
+        genero: body.genero,
+        tipo: body.tipo
     });
     
     document.save()
@@ -139,33 +183,47 @@ exports.create = (req, res, next) => {
 };
 
 /**
- * @api {post} /users/login Login
+ * @api {post} /users/login Iniciar sesión
  * @apiName PostLogin
  * @apiGroup User
  *
- * @apiParam {String} email Email
+ * @apiParam {String} cuenta Cuenta
  * @apiParam {String} password Password
  *
- * @apiSuccess {String} firstname  Firstname
- * @apiSuccess {String} lastname   Lastname.
- * @apiSuccess {String} email      Email.
- * @apiSuccess {String} createdAt  Created date of the Answers.
- * @apiSuccess {String} updateAt   Last update date of the Answers.
+ * @apiSuccess {String} cuenta Cuenta
+ * @apiSuccess {String} nombres  Nombres
+ * @apiSuccess {String} apellidos Apellidos
+ * @apiSuccess {String} tipo_identificacion  Tipo identificacion
+ * @apiSuccess {String} numero_identificacion numero_identificacion
+ * @apiSuccess {String} email     Email
+ * @apiSuccess {String} telefono Telefono
+ * @apiSuccess {String} direccion Direccion
+ * @apiSuccess {String} genero Genero
+ * @apiSuccess {String} tipo Tipo usuario
+ * @apiSuccess {String} createdAt  Created date of the Users.
+ * @apiSuccess {String} updateAt   Last update date of the Users.
  * @apiSuccess {String} token      Token.
  *
  * @apiSuccessExample Success-Response:
  *     HTTP/1.1 200 OK
- *{
- *   "user": {
- *        "firstname": "Rodolfo",
- *        "lastname": "Carcamo",
- *        "email": "rodo@gmail.com",
- *        "createdAt": "2018-02-04T20:03:27.398Z",
- *        "updatedAt": "2018-02-04T20:03:27.398Z",
- *        "__v": 0
- *    },
- *    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YTc3NjcwZjJiZGU4ZTEyMDMwY2NhN2MiLCJpYXQiOjE1MTc3NzU0NjMsImV4cCI6MTUxNzc3OTA2M30.JdNH2g8DzOkW1dvG9E5xfaobAbQ9GeVDERDV0bYISbw"
- *}
+{
+    "user": {
+        "cuenta": "rrcarcamo",
+        "nombres": "Rodolfo",
+        "apellidos": "Carcamo",
+        "tipo_identificacion": "CC",
+        "numero_identificacion": "321243",
+        "email": "carcamo@gmail.com",
+        "telefono": "434234",
+        "direccion": "Cr 43 #25",
+        "genero": "M",
+        "tipo": "C",
+        "createdAt": "2018-06-09T14:14:01.162Z",
+        "updatedAt": "2018-06-09T14:14:01.162Z",
+        "__v": 0
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YjFiZTBhOTU4N2NjZjdjZDczMjFjMzgiLCJpYXQiOjE1Mjg1NTQ0MDEsImV4cCI6MTUyODU1ODAwMX0.Sjii4lWm6uVye-rT-Ib5xNdQrVExTbVpKcnqo3hl7HA"
+}
  *
  * @apiError Document Not Found the id of the Questions was not found.
  *
@@ -176,10 +234,10 @@ exports.create = (req, res, next) => {
  *     }
  */
 exports.login = (req, res, next) => {
-    const email = req.body.email;
+    const cuenta = req.body.cuenta;
     const password = req.body.password;
     
-    Model.findOne({ email: email })
+    Model.findOne({ cuenta: cuenta })
         .then(doc => {
             if(doc){
                 // Compare Password
@@ -218,6 +276,52 @@ exports.login = (req, res, next) => {
         });
 };
 
+/**
+ * @api {post} /users/profile Perfil usuario
+ * @apiName PostProfile
+ * @apiGroup User
+ *
+ * @apiParam {String} Autorizarion Token
+ *
+ * @apiSuccess {String} cuenta Cuenta
+ * @apiSuccess {String} nombres  Nombres
+ * @apiSuccess {String} apellidos Apellidos
+ * @apiSuccess {String} tipo_identificacion  Tipo identificacion
+ * @apiSuccess {String} numero_identificacion numero_identificacion
+ * @apiSuccess {String} email     Email
+ * @apiSuccess {String} telefono Telefono
+ * @apiSuccess {String} direccion Direccion
+ * @apiSuccess {String} genero Genero
+ * @apiSuccess {String} tipo Tipo usuario
+ * @apiSuccess {String} createdAt  Created date of the Users.
+ * @apiSuccess {String} updateAt   Last update date of the Users.
+ *
+ * @apiSuccessExample Success-Response:
+ *     HTTP/1.1 200 OK
+{
+    "cuenta": "rrcarcamo",
+    "nombres": "Rodolfo",
+    "apellidos": "Carcamo",
+    "tipo_identificacion": "CC",
+    "numero_identificacion": "321243",
+    "email": "carcamo@gmail.com",
+    "telefono": "434234",
+    "direccion": "Cr 43 #25",
+    "genero": "M",
+    "tipo": "C",
+    "createdAt": "2018-06-09T14:14:01.162Z",
+    "updatedAt": "2018-06-09T14:14:01.162Z",
+    "__v": 0
+}
+ *
+ * @apiError Document Not Found the id of the Questions was not found.
+ *
+ * @apiErrorExample Error-Response:
+ *     HTTP/1.1 404 Not Found
+ *     {
+ *       "error": "Document Not Found"
+ *     }
+ */
 exports.profile = (req, res, next) => {
     Model.findById(req.decoded._id)
         .then( doc => {
