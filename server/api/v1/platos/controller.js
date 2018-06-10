@@ -187,3 +187,18 @@ exports.actualizar = (req, res, next) => {
             next(new Error(err));
         });
 };
+
+exports.buscarPlatos = (req, res, next) => {
+    let restauran = req.body.restaurante;
+    const items = Model.find({ restaurante: restauran});
+    
+    Promise.all([items.exec()])
+        .then( data => {
+            res.json({
+                data: data[0]
+            })
+        })
+        .catch( err => {
+            next(new Error(err));
+        });
+};

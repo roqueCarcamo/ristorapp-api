@@ -18,4 +18,7 @@ router.route('/registrar')
 router.route('/actualizar')
     .post(controller.actualizar)
     
+router.route('/platosByRestaurante')
+    .post(controller.buscarPlatos)
+    
 module.exports = router;
