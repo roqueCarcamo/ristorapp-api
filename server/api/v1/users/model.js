@@ -6,6 +6,7 @@ const bcrypt = require('bcryptjs');
 const schema = new Schema({
   cuenta: {
     type: String,
+    unique: true,
     required: true
   },
   password: {
