@@ -21,10 +21,9 @@
     "npm" : "~2.15.0"
   },
   "scripts": {
-    "start": "node index",
+    "start": "node index.js",
     "apidoc": "apidoc -i server/api/v1/ -o public/api",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
