@@ -12,8 +12,7 @@
     "express": "^4.16.2",
     "jsonwebtoken": "^8.1.1",
     "mongoose": "^5.0.1",
-    "validator": "^9.4.0",
-    "bower": "^1.3.2"
+    "validator": "^9.4.0"
   },
   "devDependencies": {
     "apidoc": "^0.17.6"
@@ -26,7 +25,6 @@
   "scripts": {
     "apidoc": "apidoc -i server/api/v1/ -o public/api",
     "test": "mocha",
-    "postinstall": "bower install && grunt build",
     "heroku-prebuild": "echo This runs before Heroku installs your dependencies.",
     "heroku-postbuild": "echo This runs afterwards.",
     "start": "node index.js"
