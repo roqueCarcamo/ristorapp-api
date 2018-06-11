@@ -1,17 +1,17 @@
 require('dotenv').config()
 
 const config = { 
-    hostname: '127.0.0.1',
-    port: 3000,
+    hostname: process.env.IP,
+    port: process.env.PORT,
     db: {
-        url: 'mongodb://adminRistorapp:ristorapp123@ds153700.mlab.com:53700/ristorapp'
+        url: process.env.DBURL
     },
     cors: {
-        origin: 'https://ristorapp.herokuapp.com/' || '*',
-        credentials: true
+        origin: process.env.ORIGIN || '*',
+        credentials: process.env.CREDENTIALS
     },
     jwt: {
-        secret: 'rcarme'
+        secret: process.env.JWTSECRET
     }
 };
 
