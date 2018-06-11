@@ -1,7 +1,7 @@
 require('dotenv').config()
 
 const config = { 
-    hostname: 'localhost',
+    hostname: '127.0.0.1',
     port: 3000,
     db: {
         url: 'mongodb://adminRistorapp:ristorapp123@ds153700.mlab.com:53700/ristorapp'
