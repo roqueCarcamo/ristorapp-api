@@ -88,7 +88,6 @@ exports.all = (req, res, next) => {
  * @apiParam {String} restaurante Restaurante
  * 
  * 
- *
  * @apiSuccess {String} nombre Nombre
  * @apiSuccess {String} precio Precio
  * @apiSuccess {String} restaurante Restaurante
@@ -188,6 +187,41 @@ exports.actualizar = (req, res, next) => {
         });
 };
 
+/**
+ * @api {post}  /platos/platosByRestaurante Buscar platos por restaurante
+ * @apiName PostPlato
+ * @apiGroup Plato
+ *
+ * @apiParam {String} restaurante id de Restaurante
+ *
+ * @apiSuccess {String} nombre Nombre
+ * @apiSuccess {String} precio Precio
+ * @apiSuccess {String} restaurante Restaurante
+ *
+ * @apiSuccessExample Success-Response:
+ *     HTTP/1.1 200 OK
+{
+    "data": [
+        {
+            "_id": "5b1d84a4a85bac179fcc7025",
+            "nombre": "Ensalada fuerte",
+            "precio": "20.000",
+            "restaurante": "5b1d8426a85bac179fcc7023",
+            "createdAt": "2018-06-10T20:05:56.028Z",
+            "updatedAt": "2018-06-10T20:05:56.028Z",
+            "__v": 0
+        }
+    ]
+}
+ *
+ * @apiError Document Not Found the id of the Questions was not found.
+ *
+ * @apiErrorExample Error-Response:
+ *     HTTP/1.1 404 Not Found
+ *     {
+ *       "error": "Document Not Found"
+ *     }
+ */
 exports.buscarPlatos = (req, res, next) => {
     let restauran = req.body.restaurante;
     const items = Model.find({ restaurante: restauran});

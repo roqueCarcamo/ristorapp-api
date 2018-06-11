@@ -7,6 +7,7 @@ const auth = require('./../auth');
  * /api/platos           GET  - LISTAR PLATOS
  * /api/platos/registrar POST - REGISTRAR PLATOS
  * /api/platos/actualizar POST - ACTUALIZAR PLATOS
+ * /api/platos/platosByRestaurante POST - BUSCAR PLATOS POR RESTAURANTE
  */
 
 router.route('/')
