@@ -18,13 +18,17 @@
     "apidoc": "^0.17.6"
   },
   "engines" : {
-    "node" : "4.4",
-    "npm" : "~2.15.0"
+    "node": "8.9.4",
+    "npm": "5.6.x",
+    "yarn": "1.4.0"
   },
   "scripts": {
-    "start": "node index.js",
     "apidoc": "apidoc -i server/api/v1/ -o public/api",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha",
+    "postinstall": "bower install && grunt build",
+    "heroku-prebuild": "echo This runs before Heroku installs your dependencies.",
+    "heroku-postbuild": "echo This runs afterwards.",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
