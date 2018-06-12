@@ -109,7 +109,7 @@ exports.all = (req, res, next) => {
 };
 
 /**
- * @api {post} /registrar Registrar pedido
+ * @api {post} https://ristorapp.herokuapp.com/api/registrar Registrar pedido
  * @apiName RegistrarPedido
  * @apiGroup Pedido
  *
@@ -179,7 +179,7 @@ exports.create = (req, res, next) => {
 
 
 /**
- * @api {post} /byRestaurante Listar pedidos por restaurante
+ * @api {post} https://ristorapp.herokuapp.com/api/pedidos/byRestaurante Listar pedidos por restaurante
  * @apiName GetPedidosRestaurante
  * @apiGroup Pedido
  * 
@@ -271,7 +271,7 @@ exports.buscarByRestaurante = (req, res, next) => {
 
 
 /**
- * @api {get} /byUsuario Listar pedidos usuario
+ * @api {get} https://ristorapp.herokuapp.com/api/pedidos/byUsuario Listar pedidos usuario
  * @apiName GetPedidosUsuario
  * @apiGroup Pedido
  * 

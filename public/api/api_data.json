@@ -105,7 +105,7 @@
   },
   {
     "type": "post",
-    "url": "/byRestaurante",
+    "url": "https://ristorapp.herokuapp.com/api/pedidos/byRestaurante",
     "title": "Listar pedidos por restaurante",
     "name": "GetPedidosRestaurante",
     "group": "Pedido",
@@ -202,7 +202,7 @@
   },
   {
     "type": "get",
-    "url": "/byUsuario",
+    "url": "https://ristorapp.herokuapp.com/api/pedidos/byUsuario",
     "title": "Listar pedidos usuario",
     "name": "GetPedidosUsuario",
     "group": "Pedido",
@@ -299,7 +299,7 @@
   },
   {
     "type": "post",
-    "url": "/registrar",
+    "url": "https://ristorapp.herokuapp.com/api/registrar",
     "title": "Registrar pedido",
     "name": "RegistrarPedido",
     "group": "Pedido",
@@ -431,7 +431,7 @@
   },
   {
     "type": "get",
-    "url": "/platos",
+    "url": "https://ristorapp.herokuapp.com/api/platos",
     "title": "Listar platos",
     "name": "GetPlatos",
     "group": "Plato",
@@ -514,7 +514,7 @@
   },
   {
     "type": "post",
-    "url": "/platos/platosByRestaurante",
+    "url": "https://ristorapp.herokuapp.com/api/platos/platosByRestaurante",
     "title": "Buscar platos por restaurante",
     "name": "PostPlato",
     "group": "Plato",
@@ -590,7 +590,7 @@
   },
   {
     "type": "post",
-    "url": "/platos/actualizar",
+    "url": "https://ristorapp.herokuapp.com/api/platos/actualizar",
     "title": "Actualizar plato",
     "name": "PostPlato",
     "group": "Plato",
@@ -680,7 +680,7 @@
   },
   {
     "type": "post",
-    "url": "/registrar",
+    "url": "https://ristorapp.herokuapp.com/api/platos/registrar",
     "title": "Registrar plato",
     "name": "RegistrarPlato",
     "group": "Plato",
@@ -770,7 +770,7 @@
   },
   {
     "type": "get",
-    "url": "/restaurantes",
+    "url": "https://ristorapp.herokuapp.com/api/restaurantes",
     "title": "Listar restaurantes",
     "name": "GetRestaurantes",
     "group": "Restaurante",
@@ -867,7 +867,7 @@
   },
   {
     "type": "post",
-    "url": "/restaurantes/actualizar",
+    "url": "https://ristorapp.herokuapp.com/api/restaurantes/actualizar",
     "title": "Actualizar restaurante",
     "name": "PostActualizar",
     "group": "Restaurante",
@@ -985,7 +985,7 @@
   },
   {
     "type": "post",
-    "url": "/registrar",
+    "url": "https://ristorapp.herokuapp.com/api/restaurantes/registrar",
     "title": "Registrar resturante",
     "name": "RegistrarRestaurante",
     "group": "Restaurante",
@@ -1103,7 +1103,7 @@
   },
   {
     "type": "get",
-    "url": "/users",
+    "url": "https://ristorapp.herokuapp.com/api/users",
     "title": "Listar usuarios",
     "name": "GetUser",
     "group": "Usuario",
@@ -1249,7 +1249,7 @@
   },
   {
     "type": "post",
-    "url": "/users/login",
+    "url": "https://ristorapp.herokuapp.com/api/users/login",
     "title": "Iniciar sesión",
     "name": "PostLogin",
     "group": "Usuario",
@@ -1402,7 +1402,7 @@
   },
   {
     "type": "post",
-    "url": "/users/profile",
+    "url": "https://ristorapp.herokuapp.com/api/users/profile",
     "title": "Perfil usuario",
     "name": "PostProfile",
     "group": "Usuario",
@@ -1541,7 +1541,7 @@
   },
   {
     "type": "post",
-    "url": "/signup",
+    "url": "https://ristorapp.herokuapp.com/api/users/signup",
     "title": "Registrar usuario",
     "name": "SignupUser",
     "group": "Usuario",

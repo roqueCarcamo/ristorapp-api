@@ -3,7 +3,7 @@ const config = require('./../../../config');
 const Model = require('./model');
 
 /**
- * @api {get} /platos Listar platos
+ * @api {get} https://ristorapp.herokuapp.com/api/platos Listar platos
  * @apiName GetPlatos
  * @apiGroup Plato
  * 
@@ -79,7 +79,7 @@ exports.all = (req, res, next) => {
 };
 
 /**
- * @api {post} /registrar Registrar plato
+ * @api {post} https://ristorapp.herokuapp.com/api/platos/registrar Registrar plato
  * @apiName RegistrarPlato
  * @apiGroup Plato
  *
@@ -136,7 +136,7 @@ exports.create = (req, res, next) => {
 
 
 /**
- * @api {post} /platos/actualizar Actualizar plato
+ * @api {post} https://ristorapp.herokuapp.com/api/platos/actualizar Actualizar plato
  * @apiName PostPlato
  * @apiGroup Plato
  *
@@ -188,7 +188,7 @@ exports.actualizar = (req, res, next) => {
 };
 
 /**
- * @api {post}  /platos/platosByRestaurante Buscar platos por restaurante
+ * @api {post}  https://ristorapp.herokuapp.com/api/platos/platosByRestaurante Buscar platos por restaurante
  * @apiName PostPlato
  * @apiGroup Plato
  *
