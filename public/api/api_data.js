@@ -1,7 +1,7 @@
 define({ "api": [
   {
     "type": "get",
-    "url": "/pedidos",
+    "url": "https://ristorapp.herokuapp.com/api/pedidos",
     "title": "Listar pedidos",
     "name": "GetPedidos",
     "group": "Pedido",
