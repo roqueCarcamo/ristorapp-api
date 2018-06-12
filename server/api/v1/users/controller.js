@@ -5,7 +5,7 @@ const Model = require('./model');
 /**
  * @api {get} /users Listar usuarios
  * @apiName GetUser
- * @apiGroup User
+ * @apiGroup Usuario
  * 
  * @apiParam {String} limit Limit
  * @apiParam {String} skip Skip
@@ -85,7 +85,7 @@ exports.all = (req, res, next) => {
 /**
  * @api {post} /signup Registrar usuario
  * @apiName SignupUser
- * @apiGroup User
+ * @apiGroup Usuario
  *
  * @apiParam {String} cuenta Cuenta
  * @apiParam {String} password  Password
@@ -186,7 +186,7 @@ exports.create = (req, res, next) => {
 /**
  * @api {post} /users/login Iniciar sesión
  * @apiName PostLogin
- * @apiGroup User
+ * @apiGroup Usuario
  *
  * @apiParam {String} cuenta Cuenta
  * @apiParam {String} password Password
@@ -280,7 +280,7 @@ exports.login = (req, res, next) => {
 /**
  * @api {post} /users/profile Perfil usuario
  * @apiName PostProfile
- * @apiGroup User
+ * @apiGroup Usuario
  *
  * @apiParam {String} Autorizarion Token
  *

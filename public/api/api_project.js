@@ -1,5 +1,5 @@
 define({
-  "name": "RistorApp",
+  "name": "Ristorapp",
   "version": "1.0.0",
   "description": "",
   "sampleUrl": false,
@@ -7,7 +7,7 @@ define({
   "apidoc": "0.3.0",
   "generator": {
     "name": "apidoc",
-    "time": "2018-06-12T16:15:54.909Z",
+    "time": "2018-06-12T16:18:58.619Z",
     "url": "http://apidocjs.com",
     "version": "0.17.6"
   }

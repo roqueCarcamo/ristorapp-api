@@ -1106,7 +1106,7 @@ define({ "api": [
     "url": "/users",
     "title": "Listar usuarios",
     "name": "GetUser",
-    "group": "User",
+    "group": "Usuario",
     "parameter": {
       "fields": {
         "Parameter": [
@@ -1245,14 +1245,14 @@ define({ "api": [
     },
     "version": "0.0.0",
     "filename": "server/api/v1/users/controller.js",
-    "groupTitle": "User"
+    "groupTitle": "Usuario"
   },
   {
     "type": "post",
     "url": "/users/login",
     "title": "Iniciar sesión",
     "name": "PostLogin",
-    "group": "User",
+    "group": "Usuario",
     "parameter": {
       "fields": {
         "Parameter": [
@@ -1398,14 +1398,14 @@ define({ "api": [
     },
     "version": "0.0.0",
     "filename": "server/api/v1/users/controller.js",
-    "groupTitle": "User"
+    "groupTitle": "Usuario"
   },
   {
     "type": "post",
     "url": "/users/profile",
     "title": "Perfil usuario",
     "name": "PostProfile",
-    "group": "User",
+    "group": "Usuario",
     "parameter": {
       "fields": {
         "Parameter": [
@@ -1537,14 +1537,14 @@ define({ "api": [
     },
     "version": "0.0.0",
     "filename": "server/api/v1/users/controller.js",
-    "groupTitle": "User"
+    "groupTitle": "Usuario"
   },
   {
     "type": "post",
     "url": "/signup",
     "title": "Registrar usuario",
     "name": "SignupUser",
-    "group": "User",
+    "group": "Usuario",
     "parameter": {
       "fields": {
         "Parameter": [
@@ -1760,6 +1760,6 @@ define({ "api": [
     },
     "version": "0.0.0",
     "filename": "server/api/v1/users/controller.js",
-    "groupTitle": "User"
+    "groupTitle": "Usuario"
   }
 ] });
