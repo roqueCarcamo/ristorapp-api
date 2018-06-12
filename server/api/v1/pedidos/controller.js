@@ -3,7 +3,7 @@ const config = require('./../../../config');
 const Model = require('./model');
 
 /**
- * @api {get} /pedidos Listar Pedidos
+ * @api {get} /pedidos Listar pedidos
  * @apiName GetPedidos
  * @apiGroup Pedido
  * 
@@ -179,7 +179,7 @@ exports.create = (req, res, next) => {
 
 
 /**
- * @api {post} /byRestaurante Listar Pedidos por restaurante
+ * @api {post} /byRestaurante Listar pedidos por restaurante
  * @apiName GetPedidosRestaurante
  * @apiGroup Pedido
  * 

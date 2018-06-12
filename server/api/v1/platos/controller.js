@@ -3,7 +3,7 @@ const config = require('./../../../config');
 const Model = require('./model');
 
 /**
- * @api {get} /platos Listar Platos
+ * @api {get} /platos Listar platos
  * @apiName GetPlatos
  * @apiGroup Plato
  * 
@@ -136,7 +136,7 @@ exports.create = (req, res, next) => {
 
 
 /**
- * @api {post} /platos/actualizar Actualizar Plato
+ * @api {post} /platos/actualizar Actualizar plato
  * @apiName PostPlato
  * @apiGroup Plato
  *

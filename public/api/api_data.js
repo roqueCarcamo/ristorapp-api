@@ -2,7 +2,7 @@ define({ "api": [
   {
     "type": "get",
     "url": "/pedidos",
-    "title": "Listar Pedidos",
+    "title": "Listar pedidos",
     "name": "GetPedidos",
     "group": "Pedido",
     "parameter": {
@@ -106,7 +106,7 @@ define({ "api": [
   {
     "type": "post",
     "url": "/byRestaurante",
-    "title": "Listar Pedidos por restaurante",
+    "title": "Listar pedidos por restaurante",
     "name": "GetPedidosRestaurante",
     "group": "Pedido",
     "parameter": {
@@ -432,7 +432,7 @@ define({ "api": [
   {
     "type": "get",
     "url": "/platos",
-    "title": "Listar Platos",
+    "title": "Listar platos",
     "name": "GetPlatos",
     "group": "Plato",
     "parameter": {
@@ -591,7 +591,7 @@ define({ "api": [
   {
     "type": "post",
     "url": "/platos/actualizar",
-    "title": "Actualizar Plato",
+    "title": "Actualizar plato",
     "name": "PostPlato",
     "group": "Plato",
     "parameter": {
@@ -771,7 +771,7 @@ define({ "api": [
   {
     "type": "get",
     "url": "/restaurantes",
-    "title": "Listar Restaurantes",
+    "title": "Listar restaurantes",
     "name": "GetRestaurantes",
     "group": "Restaurante",
     "parameter": {
@@ -1104,7 +1104,7 @@ define({ "api": [
   {
     "type": "get",
     "url": "/users",
-    "title": "Listar Usuarios",
+    "title": "Listar usuarios",
     "name": "GetUser",
     "group": "User",
     "parameter": {

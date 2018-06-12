@@ -3,7 +3,7 @@ const config = require('./../../../config');
 const Model = require('./model');
 
 /**
- * @api {get} /users Listar Usuarios
+ * @api {get} /users Listar usuarios
  * @apiName GetUser
  * @apiGroup User
  * 
