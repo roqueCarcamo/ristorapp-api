@@ -16,6 +16,7 @@ const Model = require('./model');
  * @apiSuccess {String} email  Email
  * @apiSuccess {String} direccion Direccion
  * @apiSuccess {String} cant_mesas  Cantidad Mesas
+ * @apiSuccess {String} url Url imagen
  *
  * @apiSuccessExample Success-Response:
  *     HTTP/1.1 200 OK
@@ -28,6 +29,7 @@ const Model = require('./model');
             "email": "cocinero@gmail.com",
             "direccion": "av 35 #23",
             "cant_mesas": "4",
+            "url": "htpp:wueyeuweieiurireur",
             "createdAt": "2018-06-09T17:52:55.533Z",
             "updatedAt": "2018-06-09T17:52:55.533Z",
             "__v": 0
@@ -81,7 +83,7 @@ exports.all = (req, res, next) => {
  * @apiParam {String} email  Email
  * @apiParam {String} direccion Direccion
  * @apiParam {String} cant_mesas  Cantidad Mesas
- * @apiParam {String} url Url
+ * @apiParam {String} url Url imagen
  * 
  * 
  *
@@ -90,7 +92,7 @@ exports.all = (req, res, next) => {
  * @apiSuccess {String} email  Email
  * @apiSuccess {String} direccion Direccion
  * @apiSuccess {String} cant_mesas  Cantidad Mesas
- * @apiSuccess {String} url Url
+ * @apiSuccess {String} url Url imagen
  *
  * @apiSuccessExample Success-Response:
  *     HTTP/1.1 200 OK
@@ -102,6 +104,7 @@ exports.all = (req, res, next) => {
         "email": "cocinero@gmail.com",
         "direccion": "av 35 #23",
         "cant_mesas": "4",
+        "url": "httpajddjkjsdhjdshjsdhjds",
         "createdAt": "2018-06-09T17:52:55.533Z",
         "updatedAt": "2018-06-09T17:52:55.533Z",
         "__v": 0
@@ -151,12 +154,14 @@ exports.create = (req, res, next) => {
  * @apiParam {String} email  Email
  * @apiParam {String} direccion Direccion
  * @apiParam {String} cant_mesas  Cantidad Mesas
+ * @apiParam {String} url Url imagen
  *
  * @apiSuccess {String} nombre Nombre
  * @apiSuccess {String} telefono  Telefono
  * @apiSuccess {String} email  Email
  * @apiSuccess {String} direccion Direccion
  * @apiSuccess {String} cant_mesas  Cantidad Mesas
+ * @apiSuccess {String} url Url imagen
  *
  * @apiSuccessExample Success-Response:
  *     HTTP/1.1 200 OK

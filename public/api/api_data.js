@@ -901,13 +901,20 @@ define({ "api": [
             "optional": false,
             "field": "cant_mesas",
             "description": "<p>Cantidad Mesas</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "url",
+            "description": "<p>Url imagen</p>"
           }
         ]
       },
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "    HTTP/1.1 200 OK\n {\n    \"data\": [\n        {\n            \"_id\": \"5b1c13f7cf903816d5069bf5\",\n            \"nombre\": \"El cocinero\",\n            \"telefono\": \"32342432\",\n            \"email\": \"cocinero@gmail.com\",\n            \"direccion\": \"av 35 #23\",\n            \"cant_mesas\": \"4\",\n            \"createdAt\": \"2018-06-09T17:52:55.533Z\",\n            \"updatedAt\": \"2018-06-09T17:52:55.533Z\",\n            \"__v\": 0\n        }\n    ],\n    \"limit\": 10,\n    \"skip\": 0,\n    \"count\": 1\n}",
+          "content": "    HTTP/1.1 200 OK\n {\n    \"data\": [\n        {\n            \"_id\": \"5b1c13f7cf903816d5069bf5\",\n            \"nombre\": \"El cocinero\",\n            \"telefono\": \"32342432\",\n            \"email\": \"cocinero@gmail.com\",\n            \"direccion\": \"av 35 #23\",\n            \"cant_mesas\": \"4\",\n            \"url\": \"htpp:wueyeuweieiurireur\",\n            \"createdAt\": \"2018-06-09T17:52:55.533Z\",\n            \"updatedAt\": \"2018-06-09T17:52:55.533Z\",\n            \"__v\": 0\n        }\n    ],\n    \"limit\": 10,\n    \"skip\": 0,\n    \"count\": 1\n}",
           "type": "json"
         }
       ]
@@ -978,6 +985,13 @@ define({ "api": [
             "optional": false,
             "field": "cant_mesas",
             "description": "<p>Cantidad Mesas</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "url",
+            "description": "<p>Url imagen</p>"
           }
         ]
       }
@@ -1019,6 +1033,13 @@ define({ "api": [
             "optional": false,
             "field": "cant_mesas",
             "description": "<p>Cantidad Mesas</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "url",
+            "description": "<p>Url imagen</p>"
           }
         ]
       },
@@ -1102,7 +1123,7 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "url",
-            "description": "<p>Url</p>"
+            "description": "<p>Url imagen</p>"
           }
         ]
       }
@@ -1150,14 +1171,14 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "url",
-            "description": "<p>Url</p>"
+            "description": "<p>Url imagen</p>"
           }
         ]
       },
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "    HTTP/1.1 200 OK\n{\n    \"restaurante\": {\n        \"_id\": \"5b1c13f7cf903816d5069bf5\",\n        \"nombre\": \"El cocinero\",\n        \"telefono\": \"32342432\",\n        \"email\": \"cocinero@gmail.com\",\n        \"direccion\": \"av 35 #23\",\n        \"cant_mesas\": \"4\",\n        \"createdAt\": \"2018-06-09T17:52:55.533Z\",\n        \"updatedAt\": \"2018-06-09T17:52:55.533Z\",\n        \"__v\": 0\n    }\n}",
+          "content": "    HTTP/1.1 200 OK\n{\n    \"restaurante\": {\n        \"_id\": \"5b1c13f7cf903816d5069bf5\",\n        \"nombre\": \"El cocinero\",\n        \"telefono\": \"32342432\",\n        \"email\": \"cocinero@gmail.com\",\n        \"direccion\": \"av 35 #23\",\n        \"cant_mesas\": \"4\",\n        \"url\": \"httpajddjkjsdhjdshjsdhjds\",\n        \"createdAt\": \"2018-06-09T17:52:55.533Z\",\n        \"updatedAt\": \"2018-06-09T17:52:55.533Z\",\n        \"__v\": 0\n    }\n}",
           "type": "json"
         }
       ]
