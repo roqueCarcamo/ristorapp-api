@@ -698,6 +698,20 @@ define({ "api": [
             "group": "Parameter",
             "type": "String",
             "optional": false,
+            "field": "descripcion",
+            "description": "<p>Descripcion</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "url",
+            "description": "<p>Url</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
             "field": "precio",
             "description": "<p>Precio</p>"
           },
@@ -720,6 +734,20 @@ define({ "api": [
             "optional": false,
             "field": "nombre",
             "description": "<p>Nombre</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "descripcion",
+            "description": "<p>Descripcion</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "url",
+            "description": "<p>Url</p>"
           },
           {
             "group": "Success 200",

@@ -84,11 +84,15 @@ exports.all = (req, res, next) => {
  * @apiGroup Plato
  *
  * @apiParam {String} nombre Nombre
+ * @apiParam {String} descripcion  Descripcion
+ * @apiParam {String} url  Url
  * @apiParam {String} precio  Precio
  * @apiParam {String} restaurante Restaurante
  * 
  * 
  * @apiSuccess {String} nombre Nombre
+ * @apiSuccess {String} descripcion Descripcion
+ * @apiSuccess {String} url Url
  * @apiSuccess {String} precio Precio
  * @apiSuccess {String} restaurante Restaurante
  *
@@ -119,6 +123,8 @@ exports.create = (req, res, next) => {
     
     let document = new Model({
         nombre: body.nombre,
+        descripcion: body.descripcion,
+        url: body.url,
         precio: body.precio,
         restaurante: body.restaurante
     });

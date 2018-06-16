@@ -8,6 +8,14 @@ const schema = new Schema({
     type: String,
     required: true
   },
+  descripcion: {
+    type: String,
+    required: true
+  },
+  url: {
+    type: String,
+    required: true
+  },
   precio: {
     type: String,
     required: true
