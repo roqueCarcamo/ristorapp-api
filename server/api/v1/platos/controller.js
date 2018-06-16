@@ -13,6 +13,8 @@ const Model = require('./model');
  *
  * @apiSuccess {String} nombre Nombre
  * @apiSuccess {String} precio Precio
+ * @apiSuccess {String} url Url
+ * @apiSuccess {String} tiempo Tiempo
  * @apiSuccess {String} restaurante Restaurante
  *
  * @apiSuccessExample Success-Response:
@@ -34,6 +36,8 @@ const Model = require('./model');
                 "updatedAt": "2018-06-10T00:20:46.515Z",
                 "__v": 0
             },
+            url: "http:ueuryreir",
+            tiempo: "1 Hora",
             "createdAt": "2018-06-10T00:21:16.632Z",
             "updatedAt": "2018-06-10T00:21:16.632Z",
             "__v": 0
@@ -87,6 +91,7 @@ exports.all = (req, res, next) => {
  * @apiParam {String} descripcion  Descripcion
  * @apiParam {String} url  Url
  * @apiParam {String} precio  Precio
+ * @apiParam {String} tiempo  Tiempo
  * @apiParam {String} restaurante Restaurante
  * 
  * 
@@ -94,6 +99,7 @@ exports.all = (req, res, next) => {
  * @apiSuccess {String} descripcion Descripcion
  * @apiSuccess {String} url Url
  * @apiSuccess {String} precio Precio
+ * @apiSuccess {String} tiempo Tiempo
  * @apiSuccess {String} restaurante Restaurante
  *
  * @apiSuccessExample Success-Response:
@@ -102,7 +108,9 @@ exports.all = (req, res, next) => {
     "plato": {
         "_id": "5b1c5cf2cdee8e1739f57846",
         "nombre": "Alitas de pollo con salsa Yakitori",
+        "url" : "http:uyeywiee",
         "precio": "12.000",
+        "tiempo": "1 hora",
         "restaurante": "5b1c13f7cf903816d5069bf5",
         "createdAt": "2018-06-09T23:04:18.412Z",
         "updatedAt": "2018-06-09T23:04:18.412Z",
@@ -151,6 +159,8 @@ exports.create = (req, res, next) => {
  * @apiParam {String} nombre Nombre
  * @apiParam {String} precio Precio
  * @apiParam {String} restaurante Restaurante
+ * @apiParam {String} ulr Url
+ * @apiParam {String} tiempo Tiempo
  *
  * @apiSuccess {String} nombre Nombre
  * @apiSuccess {String} precio Precio
@@ -163,6 +173,8 @@ exports.create = (req, res, next) => {
         "_id": "5b1c5cf2cdee8e1739f57846",
         "nombre": "Alitas de pollo con salsa Yakitori",
         "precio": "12.000",
+        "url": "httpjlkdjsjddsssds",
+        "tiempo": "1 hora",
         "restaurante": "5b1c13f7cf903816d5069bf5",
         "createdAt": "2018-06-09T23:04:18.412Z",
         "updatedAt": "2018-06-09T23:04:18.412Z",
@@ -213,6 +225,8 @@ exports.actualizar = (req, res, next) => {
             "_id": "5b1d84a4a85bac179fcc7025",
             "nombre": "Ensalada fuerte",
             "precio": "20.000",
+            "url": "http:iuewejsnkdkf",
+            "tiempo": "1 hora",
             "restaurante": "5b1d8426a85bac179fcc7023",
             "createdAt": "2018-06-10T20:05:56.028Z",
             "updatedAt": "2018-06-10T20:05:56.028Z",

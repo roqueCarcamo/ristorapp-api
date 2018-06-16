@@ -476,6 +476,20 @@ define({ "api": [
             "group": "Success 200",
             "type": "String",
             "optional": false,
+            "field": "url",
+            "description": "<p>Url</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "tiempo",
+            "description": "<p>Tiempo</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
             "field": "restaurante",
             "description": "<p>Restaurante</p>"
           }
@@ -484,7 +498,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "    HTTP/1.1 200 OK\n {\n    \"data\": [\n        {\n            \"_id\": \"5b1c6efc227e44291b220414\",\n            \"nombre\": \"Alitas de pollo con salsa Yakitori\",\n            \"precio\": \"12.000\",\n            \"restaurante\": {\n                \"_id\": \"5b1c6ede227e44291b220413\",\n                \"nombre\": \"Aperto\",\n                \"telefono\": \"32342432\",\n                \"email\": \"aperto@gmail.com\",\n                \"direccion\": \"av 35 #23\",\n                \"cant_mesas\": \"4\",\n                \"createdAt\": \"2018-06-10T00:20:46.515Z\",\n                \"updatedAt\": \"2018-06-10T00:20:46.515Z\",\n                \"__v\": 0\n            },\n            \"createdAt\": \"2018-06-10T00:21:16.632Z\",\n            \"updatedAt\": \"2018-06-10T00:21:16.632Z\",\n            \"__v\": 0\n        }\n    ],\n    \"limit\": 10,\n    \"skip\": 0,\n    \"count\": 1\n}",
+          "content": "    HTTP/1.1 200 OK\n {\n    \"data\": [\n        {\n            \"_id\": \"5b1c6efc227e44291b220414\",\n            \"nombre\": \"Alitas de pollo con salsa Yakitori\",\n            \"precio\": \"12.000\",\n            \"restaurante\": {\n                \"_id\": \"5b1c6ede227e44291b220413\",\n                \"nombre\": \"Aperto\",\n                \"telefono\": \"32342432\",\n                \"email\": \"aperto@gmail.com\",\n                \"direccion\": \"av 35 #23\",\n                \"cant_mesas\": \"4\",\n                \"createdAt\": \"2018-06-10T00:20:46.515Z\",\n                \"updatedAt\": \"2018-06-10T00:20:46.515Z\",\n                \"__v\": 0\n            },\n            url: \"http:ueuryreir\",\n            tiempo: \"1 Hora\",\n            \"createdAt\": \"2018-06-10T00:21:16.632Z\",\n            \"updatedAt\": \"2018-06-10T00:21:16.632Z\",\n            \"__v\": 0\n        }\n    ],\n    \"limit\": 10,\n    \"skip\": 0,\n    \"count\": 1\n}",
           "type": "json"
         }
       ]
@@ -560,7 +574,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "    HTTP/1.1 200 OK\n{\n    \"data\": [\n        {\n            \"_id\": \"5b1d84a4a85bac179fcc7025\",\n            \"nombre\": \"Ensalada fuerte\",\n            \"precio\": \"20.000\",\n            \"restaurante\": \"5b1d8426a85bac179fcc7023\",\n            \"createdAt\": \"2018-06-10T20:05:56.028Z\",\n            \"updatedAt\": \"2018-06-10T20:05:56.028Z\",\n            \"__v\": 0\n        }\n    ]\n}",
+          "content": "    HTTP/1.1 200 OK\n{\n    \"data\": [\n        {\n            \"_id\": \"5b1d84a4a85bac179fcc7025\",\n            \"nombre\": \"Ensalada fuerte\",\n            \"precio\": \"20.000\",\n            \"url\": \"http:iuewejsnkdkf\",\n            \"tiempo\": \"1 hora\",\n            \"restaurante\": \"5b1d8426a85bac179fcc7023\",\n            \"createdAt\": \"2018-06-10T20:05:56.028Z\",\n            \"updatedAt\": \"2018-06-10T20:05:56.028Z\",\n            \"__v\": 0\n        }\n    ]\n}",
           "type": "json"
         }
       ]
@@ -617,6 +631,20 @@ define({ "api": [
             "optional": false,
             "field": "restaurante",
             "description": "<p>Restaurante</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "ulr",
+            "description": "<p>Url</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "tiempo",
+            "description": "<p>Tiempo</p>"
           }
         ]
       }
@@ -650,7 +678,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "    HTTP/1.1 200 OK\n{\n    \"plato\": {\n        \"_id\": \"5b1c5cf2cdee8e1739f57846\",\n        \"nombre\": \"Alitas de pollo con salsa Yakitori\",\n        \"precio\": \"12.000\",\n        \"restaurante\": \"5b1c13f7cf903816d5069bf5\",\n        \"createdAt\": \"2018-06-09T23:04:18.412Z\",\n        \"updatedAt\": \"2018-06-09T23:04:18.412Z\",\n        \"__v\": 0\n    }\n}",
+          "content": "    HTTP/1.1 200 OK\n{\n    \"plato\": {\n        \"_id\": \"5b1c5cf2cdee8e1739f57846\",\n        \"nombre\": \"Alitas de pollo con salsa Yakitori\",\n        \"precio\": \"12.000\",\n        \"url\": \"httpjlkdjsjddsssds\",\n        \"tiempo\": \"1 hora\",\n        \"restaurante\": \"5b1c13f7cf903816d5069bf5\",\n        \"createdAt\": \"2018-06-09T23:04:18.412Z\",\n        \"updatedAt\": \"2018-06-09T23:04:18.412Z\",\n        \"__v\": 0\n    }\n}",
           "type": "json"
         }
       ]
@@ -719,6 +747,13 @@ define({ "api": [
             "group": "Parameter",
             "type": "String",
             "optional": false,
+            "field": "tiempo",
+            "description": "<p>Tiempo</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
             "field": "restaurante",
             "description": "<p>Restaurante</p>"
           }
@@ -760,6 +795,13 @@ define({ "api": [
             "group": "Success 200",
             "type": "String",
             "optional": false,
+            "field": "tiempo",
+            "description": "<p>Tiempo</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
             "field": "restaurante",
             "description": "<p>Restaurante</p>"
           }
@@ -768,7 +810,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "    HTTP/1.1 200 OK\n{\n    \"plato\": {\n        \"_id\": \"5b1c5cf2cdee8e1739f57846\",\n        \"nombre\": \"Alitas de pollo con salsa Yakitori\",\n        \"precio\": \"12.000\",\n        \"restaurante\": \"5b1c13f7cf903816d5069bf5\",\n        \"createdAt\": \"2018-06-09T23:04:18.412Z\",\n        \"updatedAt\": \"2018-06-09T23:04:18.412Z\",\n        \"__v\": 0\n    }\n}",
+          "content": "    HTTP/1.1 200 OK\n{\n    \"plato\": {\n        \"_id\": \"5b1c5cf2cdee8e1739f57846\",\n        \"nombre\": \"Alitas de pollo con salsa Yakitori\",\n        \"url\" : \"http:uyeywiee\",\n        \"precio\": \"12.000\",\n        \"tiempo\": \"1 hora\",\n        \"restaurante\": \"5b1c13f7cf903816d5069bf5\",\n        \"createdAt\": \"2018-06-09T23:04:18.412Z\",\n        \"updatedAt\": \"2018-06-09T23:04:18.412Z\",\n        \"__v\": 0\n    }\n}",
           "type": "json"
         }
       ]
