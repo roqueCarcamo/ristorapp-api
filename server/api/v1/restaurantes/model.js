@@ -30,6 +30,10 @@ const schema = new Schema({
   cant_mesas: {
     type: String,
     required: true
+  },
+  url: {
+    type: String,
+    required: true
   }
 },{
     timestamps: true

@@ -1054,6 +1054,13 @@ define({ "api": [
             "optional": false,
             "field": "cant_mesas",
             "description": "<p>Cantidad Mesas</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "url",
+            "description": "<p>Url</p>"
           }
         ]
       }
@@ -1095,6 +1102,13 @@ define({ "api": [
             "optional": false,
             "field": "cant_mesas",
             "description": "<p>Cantidad Mesas</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "url",
+            "description": "<p>Url</p>"
           }
         ]
       },

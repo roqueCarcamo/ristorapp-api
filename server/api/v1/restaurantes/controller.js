@@ -81,6 +81,7 @@ exports.all = (req, res, next) => {
  * @apiParam {String} email  Email
  * @apiParam {String} direccion Direccion
  * @apiParam {String} cant_mesas  Cantidad Mesas
+ * @apiParam {String} url Url
  * 
  * 
  *
@@ -89,6 +90,7 @@ exports.all = (req, res, next) => {
  * @apiSuccess {String} email  Email
  * @apiSuccess {String} direccion Direccion
  * @apiSuccess {String} cant_mesas  Cantidad Mesas
+ * @apiSuccess {String} url Url
  *
  * @apiSuccessExample Success-Response:
  *     HTTP/1.1 200 OK
@@ -122,7 +124,8 @@ exports.create = (req, res, next) => {
         telefono: body.telefono,
         email: body.email,
         direccion: body.direccion,
-        cant_mesas: body.cant_mesas
+        cant_mesas: body.cant_mesas,
+        url: body.url
     });
     
     document.save()
