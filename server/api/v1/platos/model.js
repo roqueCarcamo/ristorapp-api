@@ -20,6 +20,10 @@ const schema = new Schema({
     type: String,
     required: true
   },
+  tiempo: {
+    type: String,
+    required: true
+  },
   restaurante: {
     type: Schema.Types.ObjectId,
     ref: 'restaurante',

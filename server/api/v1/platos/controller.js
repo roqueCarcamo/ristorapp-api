@@ -126,6 +126,7 @@ exports.create = (req, res, next) => {
         descripcion: body.descripcion,
         url: body.url,
         precio: body.precio,
+        tiempo: body.tiempo,
         restaurante: body.restaurante
     });
     
