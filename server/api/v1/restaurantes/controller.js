@@ -17,6 +17,7 @@ const Model = require('./model');
  * @apiSuccess {String} direccion Direccion
  * @apiSuccess {String} cant_mesas  Cantidad Mesas
  * @apiSuccess {String} url Url imagen
+ * @apiSuccess {String} tipo Tipo
  *
  * @apiSuccessExample Success-Response:
  *     HTTP/1.1 200 OK
@@ -24,12 +25,13 @@ const Model = require('./model');
     "data": [
         {
             "_id": "5b1c13f7cf903816d5069bf5",
-            "nombre": "El cocinero",
+            "nombre": "Aperto",
             "telefono": "32342432",
             "email": "cocinero@gmail.com",
             "direccion": "av 35 #23",
             "cant_mesas": "4",
             "url": "htpp:wueyeuweieiurireur",
+            "tipo": "Comidas rapidas",
             "createdAt": "2018-06-09T17:52:55.533Z",
             "updatedAt": "2018-06-09T17:52:55.533Z",
             "__v": 0
@@ -84,6 +86,7 @@ exports.all = (req, res, next) => {
  * @apiParam {String} direccion Direccion
  * @apiParam {String} cant_mesas  Cantidad Mesas
  * @apiParam {String} url Url imagen
+ * @apiParam {String} tipo Tipo
  * 
  * 
  *
@@ -93,18 +96,20 @@ exports.all = (req, res, next) => {
  * @apiSuccess {String} direccion Direccion
  * @apiSuccess {String} cant_mesas  Cantidad Mesas
  * @apiSuccess {String} url Url imagen
+ * @apiSuccess {String} tipo Tipo
  *
  * @apiSuccessExample Success-Response:
  *     HTTP/1.1 200 OK
 {
     "restaurante": {
         "_id": "5b1c13f7cf903816d5069bf5",
-        "nombre": "El cocinero",
+        "nombre": "Aperto",
         "telefono": "32342432",
         "email": "cocinero@gmail.com",
         "direccion": "av 35 #23",
         "cant_mesas": "4",
         "url": "httpajddjkjsdhjdshjsdhjds",
+        "tipo": "Comidas rapidas",
         "createdAt": "2018-06-09T17:52:55.533Z",
         "updatedAt": "2018-06-09T17:52:55.533Z",
         "__v": 0
@@ -155,6 +160,7 @@ exports.create = (req, res, next) => {
  * @apiParam {String} direccion Direccion
  * @apiParam {String} cant_mesas  Cantidad Mesas
  * @apiParam {String} url Url imagen
+ * @apiParam {String} tipo Tipo
  *
  * @apiSuccess {String} nombre Nombre
  * @apiSuccess {String} telefono  Telefono
@@ -162,6 +168,7 @@ exports.create = (req, res, next) => {
  * @apiSuccess {String} direccion Direccion
  * @apiSuccess {String} cant_mesas  Cantidad Mesas
  * @apiSuccess {String} url Url imagen
+ * @apiSuccess {String} tipo Tipo
  *
  * @apiSuccessExample Success-Response:
  *     HTTP/1.1 200 OK

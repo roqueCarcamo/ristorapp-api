@@ -34,6 +34,10 @@ const schema = new Schema({
   url: {
     type: String,
     required: true
+  },
+  tipo: {
+    type: String,
+    required: true
   }
 },{
     timestamps: true
