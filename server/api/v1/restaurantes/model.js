@@ -38,6 +38,10 @@ const schema = new Schema({
   tipo: {
     type: String,
     required: true
+  },
+  calificacion: {
+    type: String,
+    required: true
   }
 },{
     timestamps: true

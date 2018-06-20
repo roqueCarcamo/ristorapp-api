@@ -18,6 +18,7 @@ const Model = require('./model');
  * @apiSuccess {String} cant_mesas  Cantidad Mesas
  * @apiSuccess {String} url Url imagen
  * @apiSuccess {String} tipo Tipo
+ * @apiSuccess {String} calificacion Calificación
  *
  * @apiSuccessExample Success-Response:
  *     HTTP/1.1 200 OK
@@ -32,6 +33,7 @@ const Model = require('./model');
             "cant_mesas": "4",
             "url": "htpp:wueyeuweieiurireur",
             "tipo": "Comidas rapidas",
+            "calificacion": "4",
             "createdAt": "2018-06-09T17:52:55.533Z",
             "updatedAt": "2018-06-09T17:52:55.533Z",
             "__v": 0
@@ -87,6 +89,7 @@ exports.all = (req, res, next) => {
  * @apiParam {String} cant_mesas  Cantidad Mesas
  * @apiParam {String} url Url imagen
  * @apiParam {String} tipo Tipo
+ * @apiParam {String} calificacion Calificación
  * 
  * 
  *
@@ -97,6 +100,7 @@ exports.all = (req, res, next) => {
  * @apiSuccess {String} cant_mesas  Cantidad Mesas
  * @apiSuccess {String} url Url imagen
  * @apiSuccess {String} tipo Tipo
+ * @apiSuccess {String} calificacion Calificación
  *
  * @apiSuccessExample Success-Response:
  *     HTTP/1.1 200 OK
@@ -110,6 +114,7 @@ exports.all = (req, res, next) => {
         "cant_mesas": "4",
         "url": "httpajddjkjsdhjdshjsdhjds",
         "tipo": "Comidas rapidas",
+        "calificacion": "4",
         "createdAt": "2018-06-09T17:52:55.533Z",
         "updatedAt": "2018-06-09T17:52:55.533Z",
         "__v": 0
@@ -133,7 +138,9 @@ exports.create = (req, res, next) => {
         email: body.email,
         direccion: body.direccion,
         cant_mesas: body.cant_mesas,
-        url: body.url
+        url: body.url,
+        tipo: body.tipo,
+        calificacion: body.calificacion
     });
     
     document.save()
@@ -161,6 +168,7 @@ exports.create = (req, res, next) => {
  * @apiParam {String} cant_mesas  Cantidad Mesas
  * @apiParam {String} url Url imagen
  * @apiParam {String} tipo Tipo
+ * 
  *
  * @apiSuccess {String} nombre Nombre
  * @apiSuccess {String} telefono  Telefono
@@ -173,22 +181,20 @@ exports.create = (req, res, next) => {
  * @apiSuccessExample Success-Response:
  *     HTTP/1.1 200 OK
 {
-    "user": {
-        "cuenta": "rrcarcamo",
-        "nombres": "Rodolfo",
-        "apellidos": "Carcamo",
-        "tipo_identificacion": "CC",
-        "numero_identificacion": "321243",
-        "email": "carcamo@gmail.com",
-        "telefono": "434234",
-        "direccion": "Cr 43 #25",
-        "genero": "M",
-        "tipo": "C",
-        "createdAt": "2018-06-09T14:14:01.162Z",
-        "updatedAt": "2018-06-09T14:14:01.162Z",
+    "restaurante": {
+        "_id": "5b1c13f7cf903816d5069bf5",
+        "nombre": "Aperto",
+        "telefono": "32342432",
+        "email": "cocinero@gmail.com",
+        "direccion": "av 35 #23",
+        "cant_mesas": "4",
+        "url": "httpajddjkjsdhjdshjsdhjds",
+        "tipo": "Comidas rapidas",
+        "calificacion": "4",
+        "createdAt": "2018-06-09T17:52:55.533Z",
+        "updatedAt": "2018-06-09T17:52:55.533Z",
         "__v": 0
-    },
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YjFiZTBhOTU4N2NjZjdjZDczMjFjMzgiLCJpYXQiOjE1Mjg1NTQ0MDEsImV4cCI6MTUyODU1ODAwMX0.Sjii4lWm6uVye-rT-Ib5xNdQrVExTbVpKcnqo3hl7HA"
+    }
 }
  *
  * @apiError Document Not Found the id of the Questions was not found.

@@ -69,6 +69,13 @@ define({ "api": [
             "optional": false,
             "field": "estado",
             "description": "<p>Estado</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "tiempo",
+            "description": "<p>Tiempo de llegada</p>"
           }
         ]
       },
@@ -166,6 +173,13 @@ define({ "api": [
             "optional": false,
             "field": "estado",
             "description": "<p>Estado</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "tiempo",
+            "description": "<p>Tiempo de llegada</p>"
           }
         ]
       },
@@ -263,6 +277,13 @@ define({ "api": [
             "optional": false,
             "field": "estado",
             "description": "<p>Estado</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "tiempo",
+            "description": "<p>Tiempo de llegada</p>"
           }
         ]
       },
@@ -347,6 +368,13 @@ define({ "api": [
             "optional": false,
             "field": "estado",
             "description": "<p>Estado</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "tiempo",
+            "description": "<p>Tiempo de llegada</p>"
           }
         ]
       }
@@ -395,6 +423,13 @@ define({ "api": [
             "optional": false,
             "field": "estado",
             "description": "<p>Estado</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "tiempo",
+            "description": "<p>Tiempo de llegada</p>"
           }
         ]
       },
@@ -915,13 +950,20 @@ define({ "api": [
             "optional": false,
             "field": "tipo",
             "description": "<p>Tipo</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "calificacion",
+            "description": "<p>Calificación</p>"
           }
         ]
       },
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "    HTTP/1.1 200 OK\n {\n    \"data\": [\n        {\n            \"_id\": \"5b1c13f7cf903816d5069bf5\",\n            \"nombre\": \"Aperto\",\n            \"telefono\": \"32342432\",\n            \"email\": \"cocinero@gmail.com\",\n            \"direccion\": \"av 35 #23\",\n            \"cant_mesas\": \"4\",\n            \"url\": \"htpp:wueyeuweieiurireur\",\n            \"tipo\": \"Comidas rapidas\",\n            \"createdAt\": \"2018-06-09T17:52:55.533Z\",\n            \"updatedAt\": \"2018-06-09T17:52:55.533Z\",\n            \"__v\": 0\n        }\n    ],\n    \"limit\": 10,\n    \"skip\": 0,\n    \"count\": 1\n}",
+          "content": "    HTTP/1.1 200 OK\n {\n    \"data\": [\n        {\n            \"_id\": \"5b1c13f7cf903816d5069bf5\",\n            \"nombre\": \"Aperto\",\n            \"telefono\": \"32342432\",\n            \"email\": \"cocinero@gmail.com\",\n            \"direccion\": \"av 35 #23\",\n            \"cant_mesas\": \"4\",\n            \"url\": \"htpp:wueyeuweieiurireur\",\n            \"tipo\": \"Comidas rapidas\",\n            \"calificacion\": \"4\",\n            \"createdAt\": \"2018-06-09T17:52:55.533Z\",\n            \"updatedAt\": \"2018-06-09T17:52:55.533Z\",\n            \"__v\": 0\n        }\n    ],\n    \"limit\": 10,\n    \"skip\": 0,\n    \"count\": 1\n}",
           "type": "json"
         }
       ]
@@ -1067,7 +1109,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "    HTTP/1.1 200 OK\n{\n    \"user\": {\n        \"cuenta\": \"rrcarcamo\",\n        \"nombres\": \"Rodolfo\",\n        \"apellidos\": \"Carcamo\",\n        \"tipo_identificacion\": \"CC\",\n        \"numero_identificacion\": \"321243\",\n        \"email\": \"carcamo@gmail.com\",\n        \"telefono\": \"434234\",\n        \"direccion\": \"Cr 43 #25\",\n        \"genero\": \"M\",\n        \"tipo\": \"C\",\n        \"createdAt\": \"2018-06-09T14:14:01.162Z\",\n        \"updatedAt\": \"2018-06-09T14:14:01.162Z\",\n        \"__v\": 0\n    },\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YjFiZTBhOTU4N2NjZjdjZDczMjFjMzgiLCJpYXQiOjE1Mjg1NTQ0MDEsImV4cCI6MTUyODU1ODAwMX0.Sjii4lWm6uVye-rT-Ib5xNdQrVExTbVpKcnqo3hl7HA\"\n}",
+          "content": "    HTTP/1.1 200 OK\n{\n    \"restaurante\": {\n        \"_id\": \"5b1c13f7cf903816d5069bf5\",\n        \"nombre\": \"Aperto\",\n        \"telefono\": \"32342432\",\n        \"email\": \"cocinero@gmail.com\",\n        \"direccion\": \"av 35 #23\",\n        \"cant_mesas\": \"4\",\n        \"url\": \"httpajddjkjsdhjdshjsdhjds\",\n        \"tipo\": \"Comidas rapidas\",\n        \"calificacion\": \"4\",\n        \"createdAt\": \"2018-06-09T17:52:55.533Z\",\n        \"updatedAt\": \"2018-06-09T17:52:55.533Z\",\n        \"__v\": 0\n    }\n}",
           "type": "json"
         }
       ]
@@ -1152,6 +1194,13 @@ define({ "api": [
             "optional": false,
             "field": "tipo",
             "description": "<p>Tipo</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "calificacion",
+            "description": "<p>Calificación</p>"
           }
         ]
       }
@@ -1207,13 +1256,20 @@ define({ "api": [
             "optional": false,
             "field": "tipo",
             "description": "<p>Tipo</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "calificacion",
+            "description": "<p>Calificación</p>"
           }
         ]
       },
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "    HTTP/1.1 200 OK\n{\n    \"restaurante\": {\n        \"_id\": \"5b1c13f7cf903816d5069bf5\",\n        \"nombre\": \"Aperto\",\n        \"telefono\": \"32342432\",\n        \"email\": \"cocinero@gmail.com\",\n        \"direccion\": \"av 35 #23\",\n        \"cant_mesas\": \"4\",\n        \"url\": \"httpajddjkjsdhjdshjsdhjds\",\n        \"tipo\": \"Comidas rapidas\",\n        \"createdAt\": \"2018-06-09T17:52:55.533Z\",\n        \"updatedAt\": \"2018-06-09T17:52:55.533Z\",\n        \"__v\": 0\n    }\n}",
+          "content": "    HTTP/1.1 200 OK\n{\n    \"restaurante\": {\n        \"_id\": \"5b1c13f7cf903816d5069bf5\",\n        \"nombre\": \"Aperto\",\n        \"telefono\": \"32342432\",\n        \"email\": \"cocinero@gmail.com\",\n        \"direccion\": \"av 35 #23\",\n        \"cant_mesas\": \"4\",\n        \"url\": \"httpajddjkjsdhjdshjsdhjds\",\n        \"tipo\": \"Comidas rapidas\",\n        \"calificacion\": \"4\",\n        \"createdAt\": \"2018-06-09T17:52:55.533Z\",\n        \"updatedAt\": \"2018-06-09T17:52:55.533Z\",\n        \"__v\": 0\n    }\n}",
           "type": "json"
         }
       ]

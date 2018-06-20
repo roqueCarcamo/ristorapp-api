@@ -29,6 +29,10 @@ const schema = new Schema({
   estado: {
     type: String,
     required: true
+  },
+  tiempo: {
+    type: String,
+    required: true
   }
 },{
     timestamps: true

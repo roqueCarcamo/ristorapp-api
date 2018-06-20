@@ -17,6 +17,7 @@ const Model = require('./model');
  * @apiSuccess {String} cant_platos Cantidad de platos
  * @apiSuccess {String} valor_total Valor total
  * @apiSuccess {String} estado Estado
+ * @apiSuccess {String} tiempo Tiempo de llegada
  *
  * @apiSuccessExample Success-Response:
  *     HTTP/1.1 200 OK
@@ -119,6 +120,7 @@ exports.all = (req, res, next) => {
  * @apiParam {String} cant_platos Cantidad de platos
  * @apiParam {String} valor_total Valor total
  * @apiParam {String} estado Estado
+ * @apiParam {String} tiempo Tiempo de llegada
  * 
  * 
  *
@@ -128,6 +130,7 @@ exports.all = (req, res, next) => {
  * @apiSuccess {String} cant_platos Cantidad de platos
  * @apiSuccess {String} valor_total Valor total
  * @apiSuccess {String} estado Estado
+ * @apiSuccess {String} tiempo Tiempo de llegada
  *
  * @apiSuccessExample Success-Response:
  *     HTTP/1.1 200 OK
@@ -163,7 +166,8 @@ exports.create = (req, res, next) => {
         plato: body.plato,
         cant_platos: body.cant_platos,
         valor_total: body.cant_platos,
-        estado: body.estado
+        estado: body.estado,
+        tiempo: body.tiempo
     });
     
     document.save()
@@ -191,6 +195,7 @@ exports.create = (req, res, next) => {
  * @apiSuccess {String} cant_platos Cantidad de platos
  * @apiSuccess {String} valor_total Valor total
  * @apiSuccess {String} estado Estado
+ * @apiSuccess {String} tiempo Tiempo de llegada
  *
  * @apiSuccessExample Success-Response:
  *     HTTP/1.1 200 OK
@@ -284,6 +289,7 @@ exports.buscarByRestaurante = (req, res, next) => {
  * @apiSuccess {String} cant_platos Cantidad de platos
  * @apiSuccess {String} valor_total Valor total
  * @apiSuccess {String} estado Estado
+ * @apiSuccess {String} tiempo Tiempo de llegada
  *
  * @apiSuccessExample Success-Response:
  *     HTTP/1.1 200 OK
