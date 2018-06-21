@@ -162,10 +162,10 @@ exports.create = (req, res, next) => {
     
     let document = new Model({
         restaurante: body.restaurante,
-        user: req.decoded._id,
+        user: body.usuario,
         plato: body.plato,
         cant_platos: body.cant_platos,
-        valor_total: body.cant_platos,
+        valor_total: body.valor_total,
         estado: body.estado,
         tiempo: body.tiempo
     });
@@ -354,7 +354,7 @@ exports.buscarByRestaurante = (req, res, next) => {
  *     }
  */
 exports.buscarByUsuario = (req, res, next) => {
-    let user = req.decoded._id;
+    let user = req.body.usuario;
     const items = Model.find({ user: user})
         .populate('restaurante')
         .populate('plato')

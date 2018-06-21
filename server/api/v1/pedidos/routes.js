@@ -12,12 +12,12 @@ router.route('/')
     .get(controller.all)
 
 router.route('/registrar')
-    .post(auth, controller.create)
+    .post(controller.create)
 
 router.route('/byRestaurante')
     .post(controller.buscarByRestaurante)
 
 router.route('/byUsuario')
-    .get(auth, controller.buscarByUsuario)
+    .get(controller.buscarByUsuario)
     
 module.exports = router;
