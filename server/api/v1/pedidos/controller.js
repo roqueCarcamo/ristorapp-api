@@ -261,7 +261,10 @@ exports.create = (req, res, next) => {
  */
 exports.buscarByRestaurante = (req, res, next) => {
     let restauran = req.body.restaurante;
-    const items = Model.find({ restaurante: restauran});
+    const items = Model.find({ restaurante: restauran})
+    .populate('restaurante')
+    .populate('plato')
+    .populate('user');
     
     Promise.all([items.exec()])
         .then( data => {
