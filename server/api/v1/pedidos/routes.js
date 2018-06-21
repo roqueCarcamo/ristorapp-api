@@ -18,6 +18,6 @@ router.route('/byRestaurante')
     .post(controller.buscarByRestaurante)
 
 router.route('/byUsuario')
-    .get(controller.buscarByUsuario)
+    .post(controller.buscarByUsuario)
     
 module.exports = router;
