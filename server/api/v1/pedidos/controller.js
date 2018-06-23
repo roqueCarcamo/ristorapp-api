@@ -91,7 +91,8 @@ exports.all = (req, res, next) => {
         .limit(limit)
         .populate('restaurante')
         .populate('plato')
-        .populate('user');
+        .populate('user')
+        .sort(['updatedAt', 1]);;
     
     const count = Model.count();
     
