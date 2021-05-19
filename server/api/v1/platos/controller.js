@@ -3,7 +3,7 @@ const config = require('./../../../config');
 const Model = require('./model');
 
 /**
- * @api {get} https://ristorapp.herokuapp.com/api/platos listar platos
+ * @api {get} https://ristorapp.herokuapp.com/api/platos Listar platos
  * @apiName GetPlatos
  * @apiGroup Plato
  * 
@@ -57,6 +57,7 @@ const Model = require('./model');
  *     }
  */
 exports.all = (req, res, next) => {
+    
     const limit = Number(req.query.limit) || 10;
     const skip = Number(req.query.skip) || 0;
     
