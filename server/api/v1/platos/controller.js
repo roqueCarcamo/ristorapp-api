@@ -3,7 +3,7 @@ const config = require('./../../../config');
 const Model = require('./model');
 
 /**
- * @api {get} https://ristorapp.herokuapp.com/api/platos Listar platos
+ * @api {get} https://ristorapp.herokuapp.com/api/platos listar platos
  * @apiName GetPlatos
  * @apiGroup Plato
  * 
