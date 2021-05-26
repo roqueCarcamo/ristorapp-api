@@ -1,10 +1,32 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
+const { connect } = require("mongoose");
 const cors = require('cors');
 const config = require('./config');
 
-mongoose.connect(config.db.url);
+// Parametros de conexion
+const USER = "adminRisto";
+const PASSWORD = "lcxOMU85cUX0KulZ";
+const DATA_BASE = "ristorapp";
+
+// Preparando cadena de conexion
+const CONECTOR = `mongodb+srv://${USER}:${PASSWORD}@ristorapp.tuyx0.mongodb.net/${DATA_BASE}?retryWrites=true&w=majority`;
+const OPTIONS = {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+};
+
+console.log("URL: " + CONECTOR)
+
+// Abriendo la conexión a mongoDB Atlas
+connect(CONECTOR, OPTIONS, MongoError => {
+    // si algo sale mal mostramos el error y paramos el servidor
+    if (MongoError) {
+        console.error(MongoError);
+        process.exit(1);
+    }
+}
+);
 
 const app = express();
 
